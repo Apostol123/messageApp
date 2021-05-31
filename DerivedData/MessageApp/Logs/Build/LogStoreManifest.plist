@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>7496B687-95A2-424D-996A-830EF460EBFC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7496B687-95A2-424D-996A-830EF460EBFC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166761.04771304</real>
+			<key>timeStoppedRecording</key>
+			<real>644166761.98127401</real>
+			<key>title</key>
+			<string>Build MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>7496B687-95A2-424D-996A-830EF460EBFC</string>
+		</dict>
 		<key>94AD82B9-56C6-484F-AA95-9EE3A1793E94</key>
 		<dict>
 			<key>className</key>
@@ -39,6 +73,142 @@
 			<string>Build MessageApp</string>
 			<key>uniqueIdentifier</key>
 			<string>94AD82B9-56C6-484F-AA95-9EE3A1793E94</string>
+		</dict>
+		<key>B6AB1E34-44BD-4A9E-99FF-1537696B35C2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B6AB1E34-44BD-4A9E-99FF-1537696B35C2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166611.95860803</real>
+			<key>timeStoppedRecording</key>
+			<real>644166613.85268295</real>
+			<key>title</key>
+			<string>Build MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>B6AB1E34-44BD-4A9E-99FF-1537696B35C2</string>
+		</dict>
+		<key>D8DBB89C-CF23-4C83-BBF5-042C93AA4CA5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D8DBB89C-CF23-4C83-BBF5-042C93AA4CA5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166285.613433</real>
+			<key>timeStoppedRecording</key>
+			<real>644166285.72911</real>
+			<key>title</key>
+			<string>Build MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>D8DBB89C-CF23-4C83-BBF5-042C93AA4CA5</string>
+		</dict>
+		<key>E9BFE944-8A5B-4DD1-98E5-871634E89099</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E9BFE944-8A5B-4DD1-98E5-871634E89099.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166638.08043396</real>
+			<key>timeStoppedRecording</key>
+			<real>644166638.18673599</real>
+			<key>title</key>
+			<string>Build MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>E9BFE944-8A5B-4DD1-98E5-871634E89099</string>
+		</dict>
+		<key>EF2C4412-3A4D-4B44-BC68-A82A75055085</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EF2C4412-3A4D-4B44-BC68-A82A75055085.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166752.99530804</real>
+			<key>timeStoppedRecording</key>
+			<real>644166753.49983704</real>
+			<key>title</key>
+			<string>Build MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>EF2C4412-3A4D-4B44-BC68-A82A75055085</string>
 		</dict>
 	</dict>
 </dict>

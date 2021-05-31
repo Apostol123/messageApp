@@ -6,6 +6,108 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>17F8588B-5797-4CCE-858D-9B2C0128903A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>17F8588B-5797-4CCE-858D-9B2C0128903A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166285.75716901</real>
+			<key>timeStoppedRecording</key>
+			<real>644166607.58777905</real>
+			<key>title</key>
+			<string>Run MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>17F8588B-5797-4CCE-858D-9B2C0128903A</string>
+		</dict>
+		<key>378318F2-1DB2-426E-87F0-093060BB18C3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>378318F2-1DB2-426E-87F0-093060BB18C3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166638.19046903</real>
+			<key>timeStoppedRecording</key>
+			<real>644166752.79967201</real>
+			<key>title</key>
+			<string>Run MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>378318F2-1DB2-426E-87F0-093060BB18C3</string>
+		</dict>
+		<key>A0A005F4-A07C-4214-AECB-965E25FAD9C8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A0A005F4-A07C-4214-AECB-965E25FAD9C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>MessageApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>MessageApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run MessageApp</string>
+			<key>timeStartedRecording</key>
+			<real>644166613.85614395</real>
+			<key>timeStoppedRecording</key>
+			<real>644166637.950894</real>
+			<key>title</key>
+			<string>Run MessageApp</string>
+			<key>uniqueIdentifier</key>
+			<string>A0A005F4-A07C-4214-AECB-965E25FAD9C8</string>
+		</dict>
 		<key>CD8F9BA6-2E77-41F2-8C90-E7ED05935AAB</key>
 		<dict>
 			<key>className</key>

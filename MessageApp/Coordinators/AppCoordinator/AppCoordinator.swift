@@ -52,7 +52,9 @@ class AppCoordinator {
     }
     
    private func goToLoginFlow() {
-
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+    self.navigationController.setViewControllers([vc], animated: false)
     }
     
     private func goToContactsListFlow() {
