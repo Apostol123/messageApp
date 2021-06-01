@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: Coordinator {
     private enum AppCoordinatorState {
         case initial
         case willshowLoginFlow
@@ -52,8 +52,7 @@ class AppCoordinator {
     }
     
    private func goToLoginFlow() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
+    let vc = LoginBuilder().build()
     self.navigationController.setViewControllers([vc], animated: false)
     }
     

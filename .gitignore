@@ -24,8 +24,6 @@ DerivedData/
 DerivedData/MessageApp/Logs/Build/LogStoreManifest.plist
 MessageApp/GoogleService-Info.plist
 Pods/
-MessageApp.xcworkspace/
-MessageApp.xcodeproj/
 DerivedData/MessageApp/
 ## Gcc Patch
 /*.gcno
