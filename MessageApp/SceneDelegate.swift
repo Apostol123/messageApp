@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,6 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator?.start()
         window?.rootViewController = appCoordinator?.navigationController
         window?.makeKeyAndVisible()
+        
+        FirebaseApp.configure()
         
     }
 
