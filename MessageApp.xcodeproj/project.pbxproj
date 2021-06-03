@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		078420BF265F78E700986354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078420BE265F78E700986354 /* AppDelegate.swift */; };
 		078420C1265F78E700986354 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078420C0265F78E700986354 /* SceneDelegate.swift */; };
-		078420C3265F78E700986354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078420C2265F78E700986354 /* ViewController.swift */; };
 		078420C8265F78E800986354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078420C7265F78E800986354 /* Assets.xcassets */; };
 		078420CB265F78E800986354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078420C9265F78E800986354 /* LaunchScreen.storyboard */; };
 		078420D8265F7A5700986354 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078420D7265F7A5700986354 /* AppCoordinator.swift */; };
@@ -25,6 +24,9 @@
 		0784213A2666346400986354 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421392666346400986354 /* CoordinatorProtocol.swift */; };
 		0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784213D2666347B00986354 /* BuilderProtocol.swift */; };
 		07842141266636D300986354 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842140266636D300986354 /* LoginBuilder.swift */; };
+		07842146266639C000986354 /* MessageAppThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842145266639C000986354 /* MessageAppThemeColors.swift */; };
+		078421662668E2AA00986354 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421652668E2AA00986354 /* LoginView.swift */; };
+		0784216A2668E3D300986354 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421692668E3D300986354 /* LoginCell.swift */; };
 		744895D787BC429FD05AC826 /* libPods-MessageApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +34,6 @@
 		078420BB265F78E700986354 /* MessageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078420BE265F78E700986354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		078420C0265F78E700986354 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		078420C2265F78E700986354 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		078420C7265F78E800986354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078420CA265F78E800986354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		078420CC265F78E800986354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		078421392666346400986354 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		0784213D2666347B00986354 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		07842140266636D300986354 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		07842145266639C000986354 /* MessageAppThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAppThemeColors.swift; sourceTree = "<group>"; };
+		078421652668E2AA00986354 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		078421692668E3D300986354 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		2EBCDADFF82CB6B6195BA94D /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF3B45EBA0F74893FB31C7A /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		078420B2265F78E700986354 = {
 			isa = PBXGroup;
 			children = (
+				078421602668E25C00986354 /* Components */,
 				078420BD265F78E700986354 /* MessageApp */,
 				078420BC265F78E700986354 /* Products */,
 				5ABF56521DE99CEEF35FB6D7 /* Pods */,
@@ -87,13 +92,13 @@
 		078420BD265F78E700986354 /* MessageApp */ = {
 			isa = PBXGroup;
 			children = (
+				078421432666399B00986354 /* Theme */,
 				078421382666345200986354 /* Common */,
 				0784210F26662D0200986354 /* GoogleService-Info.plist */,
 				0784210726662C3100986354 /* Modules */,
 				078420D5265F7A3500986354 /* Coordinators */,
 				078420BE265F78E700986354 /* AppDelegate.swift */,
 				078420C0265F78E700986354 /* SceneDelegate.swift */,
-				078420C2265F78E700986354 /* ViewController.swift */,
 				078420C7265F78E800986354 /* Assets.xcassets */,
 				078420C9265F78E800986354 /* LaunchScreen.storyboard */,
 				078420CC265F78E800986354 /* Info.plist */,
@@ -188,6 +193,63 @@
 				0784213D2666347B00986354 /* BuilderProtocol.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		078421432666399B00986354 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				07842144266639A200986354 /* Colors */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		07842144266639A200986354 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				07842145266639C000986354 /* MessageAppThemeColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		078421602668E25C00986354 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				078421632668E27800986354 /* Views */,
+				078421612668E26200986354 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		078421612668E26200986354 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				078421622668E26700986354 /* LoginCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		078421622668E26700986354 /* LoginCell */ = {
+			isa = PBXGroup;
+			children = (
+				078421692668E3D300986354 /* LoginCell.swift */,
+			);
+			path = LoginCell;
+			sourceTree = "<group>";
+		};
+		078421632668E27800986354 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				078421642668E27D00986354 /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		078421642668E27D00986354 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				078421652668E2AA00986354 /* LoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		51030FFEBF07750761EAC29D /* Frameworks */ = {
@@ -304,10 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				078421332666342C00986354 /* LoginDataManager.swift in Sources */,
+				07842146266639C000986354 /* MessageAppThemeColors.swift in Sources */,
 				078421302666341300986354 /* LoginInteractorProtocol.swift in Sources */,
 				07842124266633A800986354 /* LoginViewControllerProtocol.swift in Sources */,
 				078420D8265F7A5700986354 /* AppCoordinator.swift in Sources */,
-				078420C3265F78E700986354 /* ViewController.swift in Sources */,
 				078421362666343E00986354 /* LoginDataManagerProtocol.swift in Sources */,
 				07842127266633C500986354 /* LoginViewControllerPresenter.swift in Sources */,
 				0784213A2666346400986354 /* CoordinatorProtocol.swift in Sources */,
@@ -316,7 +378,9 @@
 				078420C1265F78E700986354 /* SceneDelegate.swift in Sources */,
 				0784212A266633DF00986354 /* LoginViewControllerPresenterProtocol.swift in Sources */,
 				07842141266636D300986354 /* LoginBuilder.swift in Sources */,
+				0784216A2668E3D300986354 /* LoginCell.swift in Sources */,
 				0784212D2666340100986354 /* LoginInteractor.swift in Sources */,
+				078421662668E2AA00986354 /* LoginView.swift in Sources */,
 				0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
