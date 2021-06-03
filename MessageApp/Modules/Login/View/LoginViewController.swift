@@ -22,6 +22,15 @@ class LoginViewController: UIViewController {
         return view
     }()
     
+    lazy var  button: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setTitle("Login", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.register(LoginCell.self, forCellWithReuseIdentifier: "loginView")
@@ -32,6 +41,7 @@ class LoginViewController: UIViewController {
     lazy var collectionViewLayout: UICollectionViewFlowLayout = {
        var layout = UICollectionViewFlowLayout()
         layout.sectionInset = sectionInsets
+        layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: view.frame.size.width, height: 140)
         return layout
     }()
@@ -45,6 +55,16 @@ class LoginViewController: UIViewController {
     private func setUpLayout() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         setUpCollectionViewContainerLayout()
+        setUpButtonLayout()
+    }
+    
+    private func setUpButtonLayout() {
+        self.view.addSubview(button)
+        let guide = view.safeAreaLayoutGuide
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -16).isActive = true
+        button.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
     }
     
     private func setUpCollectionViewContainerLayout() {
@@ -68,6 +88,11 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func didTapButton() {
+        self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .right, animated: true)
+        self.collectionView.isScrollEnabled = false
+    }
+    
 }
 
 extension LoginViewController: LoginViewControllerProtocol {
@@ -76,11 +101,14 @@ extension LoginViewController: LoginViewControllerProtocol {
 
 extension LoginViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginCell
+        if indexPath.row == 1 {
+            cell.loginView.textField.placeholder = "Enter Validation Code: "
+        }
         return cell
     }
 }

@@ -11,6 +11,7 @@ class LoginView: UIView {
     lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.placeholder = "Email: "
+        textField.textAlignment = .center
         return textField
     }()
     
@@ -23,7 +24,7 @@ class LoginView: UIView {
         self.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16).isActive = true
-        textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16).isActive = true
+        textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
         textField.topAnchor.constraint(equalTo: self.topAnchor,constant: 16).isActive = true
         textField.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 16).isActive = true
     }
