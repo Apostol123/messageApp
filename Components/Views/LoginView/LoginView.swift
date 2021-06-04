@@ -23,10 +23,10 @@ class LoginView: UIView {
     private func commonInit() {
         self.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16).isActive = true
-        textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
-        textField.topAnchor.constraint(equalTo: self.topAnchor,constant: 16).isActive = true
-        textField.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 16).isActive = true
+        textField.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 0).isActive = true
+        textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        textField.topAnchor.constraint(equalTo: self.topAnchor,constant: 0).isActive = true
+        textField.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
     }
     
     required init?(coder: NSCoder) {
