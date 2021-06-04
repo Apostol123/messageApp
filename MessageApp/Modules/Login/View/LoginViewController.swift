@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     lazy var  button: UIButton = {
         let button = UIButton(frame: .zero)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Validate", for: .normal)
         button.backgroundColor = .white
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
