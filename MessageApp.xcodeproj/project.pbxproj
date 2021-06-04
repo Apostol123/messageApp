@@ -25,8 +25,10 @@
 		0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784213D2666347B00986354 /* BuilderProtocol.swift */; };
 		07842141266636D300986354 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842140266636D300986354 /* LoginBuilder.swift */; };
 		07842146266639C000986354 /* MessageAppThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842145266639C000986354 /* MessageAppThemeColors.swift */; };
-		078421662668E2AA00986354 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421652668E2AA00986354 /* LoginView.swift */; };
-		0784216A2668E3D300986354 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421692668E3D300986354 /* LoginCell.swift */; };
+		078421662668E2AA00986354 /* LoginEmailValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421652668E2AA00986354 /* LoginEmailValidationView.swift */; };
+		0784216A2668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078421692668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift */; };
+		07842177266A201A00986354 /* LoginPhoneNumberValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842176266A201A00986354 /* LoginPhoneNumberValidationView.swift */; };
+		0784217C266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */; };
 		744895D787BC429FD05AC826 /* libPods-MessageApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +53,10 @@
 		0784213D2666347B00986354 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		07842140266636D300986354 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		07842145266639C000986354 /* MessageAppThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAppThemeColors.swift; sourceTree = "<group>"; };
-		078421652668E2AA00986354 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		078421692668E3D300986354 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		078421652668E2AA00986354 /* LoginEmailValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidationView.swift; sourceTree = "<group>"; };
+		078421692668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailValidatonCollectionViewCell.swift; sourceTree = "<group>"; };
+		07842176266A201A00986354 /* LoginPhoneNumberValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneNumberValidationView.swift; sourceTree = "<group>"; };
+		0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneNumberValidationCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EBCDADFF82CB6B6195BA94D /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF3B45EBA0F74893FB31C7A /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,7 +235,8 @@
 		078421622668E26700986354 /* LoginCell */ = {
 			isa = PBXGroup;
 			children = (
-				078421692668E3D300986354 /* LoginCell.swift */,
+				078421692668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift */,
+				0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */,
 			);
 			path = LoginCell;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 		078421632668E27800986354 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07842175266A1FF000986354 /* LoginPhoneNumberValidationView */,
 				078421642668E27D00986354 /* LoginView */,
 			);
 			path = Views;
@@ -247,9 +253,17 @@
 		078421642668E27D00986354 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				078421652668E2AA00986354 /* LoginView.swift */,
+				078421652668E2AA00986354 /* LoginEmailValidationView.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		07842175266A1FF000986354 /* LoginPhoneNumberValidationView */ = {
+			isa = PBXGroup;
+			children = (
+				07842176266A201A00986354 /* LoginPhoneNumberValidationView.swift */,
+			);
+			path = LoginPhoneNumberValidationView;
 			sourceTree = "<group>";
 		};
 		51030FFEBF07750761EAC29D /* Frameworks */ = {
@@ -366,6 +380,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				078421332666342C00986354 /* LoginDataManager.swift in Sources */,
+				0784217C266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift in Sources */,
+				07842177266A201A00986354 /* LoginPhoneNumberValidationView.swift in Sources */,
 				07842146266639C000986354 /* MessageAppThemeColors.swift in Sources */,
 				078421302666341300986354 /* LoginInteractorProtocol.swift in Sources */,
 				07842124266633A800986354 /* LoginViewControllerProtocol.swift in Sources */,
@@ -378,9 +394,9 @@
 				078420C1265F78E700986354 /* SceneDelegate.swift in Sources */,
 				0784212A266633DF00986354 /* LoginViewControllerPresenterProtocol.swift in Sources */,
 				07842141266636D300986354 /* LoginBuilder.swift in Sources */,
-				0784216A2668E3D300986354 /* LoginCell.swift in Sources */,
+				0784216A2668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift in Sources */,
 				0784212D2666340100986354 /* LoginInteractor.swift in Sources */,
-				078421662668E2AA00986354 /* LoginView.swift in Sources */,
+				078421662668E2AA00986354 /* LoginEmailValidationView.swift in Sources */,
 				0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

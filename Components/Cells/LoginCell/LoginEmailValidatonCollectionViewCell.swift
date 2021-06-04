@@ -7,10 +7,14 @@
 
 import UIKit
 
-class LoginCell: UICollectionViewCell {
+protocol LoginEmailValidatonCollectionViewCellDelegate {
+    func getValidationCode() -> String
+}
+
+class LoginEmailValidatonCollectionViewCell: UICollectionViewCell {
     
-    lazy var loginView: LoginView = {
-        let view = LoginView(frame: self.contentView.frame)
+    lazy var loginView: LoginEmailValidationView = {
+        let view = LoginEmailValidationView(frame: self.contentView.frame)
         return view
     }()
     override init(frame: CGRect) {

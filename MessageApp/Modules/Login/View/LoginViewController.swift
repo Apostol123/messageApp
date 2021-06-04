@@ -33,7 +33,8 @@ class LoginViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: "loginView")
+        collectionView.register(LoginEmailValidatonCollectionViewCell.self, forCellWithReuseIdentifier: "loginView")
+        collectionView.register(LoginPhoneNumberValidationCellCollectionViewCell.self, forCellWithReuseIdentifier: "validationCell")
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -50,6 +51,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.theme(identifier: .messageAppDefaultPurple)
         self.setUpLayout()
+        setUpKeyboardDismiss()
+    }
+    
+    private func setUpKeyboardDismiss() {
+        let tapGesutre = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(tapGesutre)
     }
     
     private func setUpLayout() {
@@ -93,6 +101,10 @@ class LoginViewController: UIViewController {
         self.collectionView.isScrollEnabled = false
     }
     
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
 }
 
 extension LoginViewController: LoginViewControllerProtocol {
@@ -105,9 +117,9 @@ extension LoginViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginEmailValidatonCollectionViewCell
         if indexPath.row == 1 {
-            cell.loginView.textField.placeholder = "Enter Validation Code: "
+           return collectionView.dequeueReusableCell(withReuseIdentifier: "validationCell", for: indexPath) as! LoginPhoneNumberValidationCellCollectionViewCell
         }
         return cell
     }
