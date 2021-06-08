@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LoginViewControllerProtocol: class {
-    
+protocol LoginViewControllerProtocol: class, ErrorDialog {
+    func goToNumberValidationScreen()
 }

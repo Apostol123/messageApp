@@ -8,13 +8,15 @@
 import UIKit
 
 class LoginEmailValidationView: UIView {
-    lazy var textField: UITextField = {
+    lazy private var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         textField.textColor = .black
         textField.textAlignment = .center
         return textField
     }()
+    
+    weak public var delegate: LoginEmailValidatonCollectionViewCellDelegate?
     
     override init(frame: CGRect ) {
         super.init(frame: frame)
@@ -32,5 +34,11 @@ class LoginEmailValidationView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension LoginEmailValidationView: LoginEmailValidatonCollectionViewCellDelegate {
+    func getValidationCode() -> String? {
+        return self.textField.text
     }
 }

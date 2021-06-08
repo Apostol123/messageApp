@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
         collectionView.register(LoginEmailValidatonCollectionViewCell.self, forCellWithReuseIdentifier: "loginView")
         collectionView.register(LoginPhoneNumberValidationCellCollectionViewCell.self, forCellWithReuseIdentifier: "validationCell")
         collectionView.backgroundColor = .white
+        collectionView.isScrollEnabled = false
         return collectionView
     }()
     
@@ -97,9 +98,11 @@ class LoginViewController: UIViewController {
     }
     
     @objc func didTapButton() {
-        self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .right, animated: true)
-        self.collectionView.isScrollEnabled = false
-        //To change
+        if let emailCell = self.collectionView.cellForItem(at:  IndexPath(item: 0, section: 0)) as? LoginEmailValidatonCollectionViewCell {
+            if let text = emailCell.getValidationCode() {
+                presenter.saveEmail(email: text)
+            }
+        }
         if let  cell =  self.collectionView.cellForItem(at:  IndexPath(item: 1, section: 0)) as? LoginPhoneNumberValidationCellCollectionViewCell {
             print(cell.getAllPhoneNumbeTextFieldText())
         }
@@ -112,7 +115,9 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewControllerProtocol {
-    
+    func goToNumberValidationScreen() {
+        self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .right, animated: true)
+    }
 }
 
 extension LoginViewController: UICollectionViewDataSource, UICollectionViewDelegate {

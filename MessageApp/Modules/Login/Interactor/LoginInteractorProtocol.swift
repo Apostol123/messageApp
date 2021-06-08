@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Firebase
 
 protocol LoginInteractorProtocol: class {
-    
+    func saveEmail(email: String, completion: @escaping(Result<AuthDataResult?,Error>) -> Void)
 }

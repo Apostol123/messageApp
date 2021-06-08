@@ -6,5 +6,5 @@ target 'MessageApp' do
   
 
   # Pods for MessageApp
-  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 end

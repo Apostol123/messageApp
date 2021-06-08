@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol LoginEmailValidatonCollectionViewCellDelegate {
-    func getValidationCode() -> String
+protocol LoginEmailValidatonCollectionViewCellDelegate: class {
+    func getValidationCode() -> String?
 }
 
-class LoginEmailValidatonCollectionViewCell: UICollectionViewCell {
-    
+class LoginEmailValidatonCollectionViewCell: UICollectionViewCell, LoginEmailValidatonCollectionViewCellDelegate {
+
     lazy var loginView: LoginEmailValidationView = {
         let view = LoginEmailValidationView(frame: self.contentView.frame)
         return view
@@ -33,9 +33,14 @@ class LoginEmailValidatonCollectionViewCell: UICollectionViewCell {
         self.loginView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
         self.loginView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
         self.loginView.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+        loginView.delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getValidationCode() -> String? {
+        loginView.getValidationCode()
     }
 }
