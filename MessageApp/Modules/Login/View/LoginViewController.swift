@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
        var layout = UICollectionViewFlowLayout()
         layout.sectionInset = sectionInsets
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: view.frame.size.width, height: 140)
+        layout.itemSize = CGSize(width: view.frame.size.width - 32, height: 140)
         return layout
     }()
     
@@ -99,6 +99,10 @@ class LoginViewController: UIViewController {
     @objc func didTapButton() {
         self.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .right, animated: true)
         self.collectionView.isScrollEnabled = false
+        //To change
+        if let  cell =  self.collectionView.cellForItem(at:  IndexPath(item: 1, section: 0)) as? LoginPhoneNumberValidationCellCollectionViewCell {
+            print(cell.getAllPhoneNumbeTextFieldText())
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -119,7 +123,8 @@ extension LoginViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginEmailValidatonCollectionViewCell
         if indexPath.row == 1 {
-           return collectionView.dequeueReusableCell(withReuseIdentifier: "validationCell", for: indexPath) as! LoginPhoneNumberValidationCellCollectionViewCell
+            let phoneCell = collectionView.dequeueReusableCell(withReuseIdentifier: "validationCell", for: indexPath) as! LoginPhoneNumberValidationCellCollectionViewCell
+           return phoneCell
         }
         return cell
     }

@@ -7,10 +7,14 @@
 
 import UIKit
 
+protocol PhoneNumberViewDelegeate: class {
+    func getAllPhoneNumbeTextFieldText() -> String?
+}
+
 class LoginPhoneNumberValidationView: UIView {
     
     lazy private var validationTextField: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 16.0))
+        let textField = UITextField(frame: .zero)
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         textField.textAlignment = .center
@@ -18,8 +22,10 @@ class LoginPhoneNumberValidationView: UIView {
         return textField
     }()
     
+    weak var delegate: PhoneNumberViewDelegeate?
+    
     lazy private var validationTextField1: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 16.0))
+        let textField = UITextField(frame: .zero)
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         textField.textAlignment = .center
@@ -28,7 +34,7 @@ class LoginPhoneNumberValidationView: UIView {
     }()
     
     lazy private var validationTextField2: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 16.0))
+        let textField = UITextField(frame: .zero)
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         textField.textAlignment = .center
@@ -37,7 +43,7 @@ class LoginPhoneNumberValidationView: UIView {
     }()
     
     lazy private var validationTextField3: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 16.0))
+        let textField = UITextField(frame: .zero)
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         textField.textAlignment = .center
@@ -46,7 +52,7 @@ class LoginPhoneNumberValidationView: UIView {
     }()
     
     lazy private var validationTextField4: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 16.0))
+        let textField = UITextField(frame: .zero)
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         textField.textAlignment = .center
@@ -70,11 +76,12 @@ class LoginPhoneNumberValidationView: UIView {
     private func commonInit() {
         self.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 0).isActive = true
-        mainStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: 0).isActive = true
+        mainStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 16).isActive = true
+        mainStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -16).isActive = true
         mainStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         setUpTextFields()
+        
     }
     
     private func setUpTextFields() {
@@ -89,6 +96,10 @@ class LoginPhoneNumberValidationView: UIView {
         validationTextField2.addTarget(self, action: #selector(jumpToNextTextField(sender:)), for: .editingChanged)
         validationTextField3.addTarget(self, action: #selector(jumpToNextTextField(sender:)), for: .editingChanged)
         validationTextField4.addTarget(self, action: #selector(jumpToNextTextField(sender:)), for: .editingChanged)
+    }
+    
+    deinit {
+        print("\(self.description) is deiniting")
     }
     
     @objc  private func jumpToNextTextField(sender: UITextField) {
@@ -120,4 +131,19 @@ extension LoginPhoneNumberValidationView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
+}
+
+extension LoginPhoneNumberValidationView: PhoneNumberViewDelegeate {
+    func getAllPhoneNumbeTextFieldText() -> String? {
+        var phoneNumberValidationText = ""
+        for view in mainStackView.subviews {
+            if let textField = view as? UITextField {
+                if let text = textField.text {
+                phoneNumberValidationText.append(text)
+                }
+            }
+        }
+        return phoneNumberValidationText.isEmpty ? nil : phoneNumberValidationText
+    }
+   
 }

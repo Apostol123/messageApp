@@ -22,6 +22,10 @@ class LoginEmailValidatonCollectionViewCell: UICollectionViewCell {
         commonInit()
     }
     
+    deinit {
+        print("\(self.description) is deiniting")
+    }
+    
     private func commonInit() {
         self.contentView.addSubview(loginView)
         self.loginView.translatesAutoresizingMaskIntoConstraints = false

@@ -7,7 +7,10 @@
 
 import UIKit
 
-class LoginPhoneNumberValidationCellCollectionViewCell: UICollectionViewCell {
+class LoginPhoneNumberValidationCellCollectionViewCell: UICollectionViewCell, PhoneNumberViewDelegeate {
+    func getAllPhoneNumbeTextFieldText() -> String? {
+        return phoneValidationView.getAllPhoneNumbeTextFieldText()
+    }
     
     private lazy var phoneValidationView: LoginPhoneNumberValidationView = {
         let view = LoginPhoneNumberValidationView(frame: .zero)
@@ -30,5 +33,6 @@ class LoginPhoneNumberValidationCellCollectionViewCell: UICollectionViewCell {
         self.phoneValidationView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.phoneValidationView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.phoneValidationView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        phoneValidationView.delegate = self
     }
 }
