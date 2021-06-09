@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class LoginDataManager: LoginDataManagerProtocol {
+
     func saveEmail(email: String ,result: @escaping(Result<AuthDataResult?,Error>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: "defaultPassword") { (authResult, error) in
             if let error = error {
@@ -16,6 +17,16 @@ class LoginDataManager: LoginDataManagerProtocol {
                 return
             }
             result(.success(authResult))
+        }
+    }
+    
+    func verifyPhoneNumber(phoneNumber: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verifcationID, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            completion(.success(verifcationID))
         }
     }
 }

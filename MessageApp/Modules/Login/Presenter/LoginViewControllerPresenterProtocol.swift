@@ -9,4 +9,5 @@ import Foundation
 
 protocol LoginViewControllerPresenterProtocol: class {
     func saveEmail(email: String)
+    func verifyPhoneNumber(phoneNumber: String)
 }

@@ -10,4 +10,6 @@ import Firebase
 
 protocol LoginDataManagerProtocol {
     func saveEmail(email: String ,result: @escaping(Result<AuthDataResult?,Error>) -> Void)
+    
+    func verifyPhoneNumber(phoneNumber: String, completion: @escaping(Result<String?, Error>) -> Void)
 }

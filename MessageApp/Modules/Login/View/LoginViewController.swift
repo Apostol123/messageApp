@@ -103,8 +103,8 @@ class LoginViewController: UIViewController {
                 presenter.saveEmail(email: text)
             }
         }
-        if let  cell =  self.collectionView.cellForItem(at:  IndexPath(item: 1, section: 0)) as? LoginPhoneNumberValidationCellCollectionViewCell {
-            print(cell.getAllPhoneNumbeTextFieldText())
+        if let  cell =  self.collectionView.cellForItem(at:  IndexPath(item: 0, section: 0)) as? LoginPhoneNumberValidationCellCollectionViewCell {
+            presenter.verifyPhoneNumber(phoneNumber: "+34634786725")
         }
     }
     
@@ -126,12 +126,12 @@ extension LoginViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginEmailValidatonCollectionViewCell
-        if indexPath.row == 1 {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginView", for: indexPath) as! LoginEmailValidatonCollectionViewCell
+//        if indexPath.row == 1 {
             let phoneCell = collectionView.dequeueReusableCell(withReuseIdentifier: "validationCell", for: indexPath) as! LoginPhoneNumberValidationCellCollectionViewCell
            return phoneCell
-        }
-        return cell
+//        }
+//        return cell
     }
 }
 

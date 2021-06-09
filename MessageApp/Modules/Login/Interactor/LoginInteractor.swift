@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class LoginInteractor: LoginInteractorProtocol {
+    
     var dataManager: LoginDataManagerProtocol
     
     init(dataManager: LoginDataManagerProtocol) {
@@ -20,6 +21,17 @@ class LoginInteractor: LoginInteractorProtocol {
             switch result {
             case .success(let dataResult):
                 completion(.success(dataResult))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func verifyPhoneNumber(phoneNumber: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        dataManager.verifyPhoneNumber(phoneNumber: phoneNumber) { (result) in
+            switch result {
+            case .success(let verificationId):
+                completion(.success(verificationId))
             case .failure(let error):
                 completion(.failure(error))
             }

@@ -26,4 +26,15 @@ class LoginViewControllerPresenter: LoginViewControllerPresenterProtocol {
             }
         }
     }
+    
+    func verifyPhoneNumber(phoneNumber: String) {
+        interactor.verifyPhoneNumber(phoneNumber: phoneNumber) { (result) in
+            switch result {
+            case .success( let verificationId):
+                print("phone number is correct \(verificationId) ")
+            case .failure(let error):
+                print("phone number is not correct \(error) ")
+            }
+        }
+    }
 }
