@@ -20,7 +20,8 @@ class AppCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.state = .initial
+        let hasEmailCredentials = UserDefaults.standard.bool(forKey: "hasEmailCredentials")
+        self.state = hasEmailCredentials ? .willShowContactLists : .initial
     }
     
     func start() {
@@ -32,9 +33,9 @@ class AppCoordinator: Coordinator {
         switch state {
         case .willshowLoginFlow:
             self.goToLoginFlow()
-        case .didShowLoginFlow:
+        case .willShowContactLists:
             self.goToContactsListFlow()
-        case .willShowContactLists ,.initial:
+        case .didShowLoginFlow, .initial:
             fatalError("Unexpeted case in App Coordinator")
         }
     }
@@ -51,13 +52,21 @@ class AppCoordinator: Coordinator {
         }
     }
     
-   private func goToLoginFlow() {
-    let vc = LoginBuilder().build()
-    self.navigationController.setViewControllers([vc], animated: false)
+    private func goToLoginFlow() {
+        let vc = LoginBuilder(output: { [weak self] output in
+            switch output {
+            case .goToMainView:
+                self?.state = .didShowLoginFlow
+                self?.loop()
+            }
+        }).build()
+        self.navigationController.setViewControllers([vc], animated: false)
     }
     
     private func goToContactsListFlow() {
-        
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+        self.navigationController.pushViewController(vc, animated: true)
     }
     
 }

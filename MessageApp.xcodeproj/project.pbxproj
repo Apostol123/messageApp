@@ -30,6 +30,7 @@
 		07842177266A201A00986354 /* LoginPhoneNumberValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07842176266A201A00986354 /* LoginPhoneNumberValidationView.swift */; };
 		0784217C266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */; };
 		0784218C266FB9E900986354 /* ErrorDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784218B266FB9E900986354 /* ErrorDialog.swift */; };
+		07D5946526720D7000783CA7 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5946426720D7000783CA7 /* LoginViewOutput.swift */; };
 		744895D787BC429FD05AC826 /* libPods-MessageApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		07842176266A201A00986354 /* LoginPhoneNumberValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneNumberValidationView.swift; sourceTree = "<group>"; };
 		0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneNumberValidationCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		0784218B266FB9E900986354 /* ErrorDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialog.swift; sourceTree = "<group>"; };
+		07D5946426720D7000783CA7 /* LoginViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		2EBCDADFF82CB6B6195BA94D /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF3B45EBA0F74893FB31C7A /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				078421202666336E00986354 /* LoginViewController.swift */,
 				07842123266633A800986354 /* LoginViewControllerProtocol.swift */,
+				07D5946426720D7000783CA7 /* LoginViewOutput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				07842141266636D300986354 /* LoginBuilder.swift in Sources */,
 				0784216A2668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift in Sources */,
 				0784212D2666340100986354 /* LoginInteractor.swift in Sources */,
+				07D5946526720D7000783CA7 /* LoginViewOutput.swift in Sources */,
 				078421662668E2AA00986354 /* LoginEmailValidationView.swift in Sources */,
 				0784218C266FB9E900986354 /* ErrorDialog.swift in Sources */,
 				0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */,

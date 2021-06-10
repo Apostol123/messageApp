@@ -20,6 +20,8 @@ class LoginInteractor: LoginInteractorProtocol {
         dataManager.saveEmail(email: email) { (result) in
             switch result {
             case .success(let dataResult):
+                
+                self.saveVerificationId(hasEmailCredentilas: (dataResult?.user.email != nil) ?? false)
                 completion(.success(dataResult))
             case .failure(let error):
                 completion(.failure(error))
@@ -36,5 +38,9 @@ class LoginInteractor: LoginInteractorProtocol {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func saveVerificationId(hasEmailCredentilas: Bool) {
+        UserDefaults.standard.set(hasEmailCredentilas, forKey: "hasEmailCredentials")
     }
 }

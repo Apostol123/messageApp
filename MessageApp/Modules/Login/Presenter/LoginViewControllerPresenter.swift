@@ -11,27 +11,29 @@ class LoginViewControllerPresenter: LoginViewControllerPresenterProtocol {
    
     weak var view: LoginViewControllerProtocol?
     var interactor: LoginInteractorProtocol
+    let output: ((LoginViewOutput) -> Void)
     
-    init(interactor: LoginInteractor) {
+    init(interactor: LoginInteractor, output: @escaping ((LoginViewOutput) -> Void)) {
         self.interactor = interactor
+        self.output = output
     }
     
     func saveEmail(email: String) {
-        interactor.saveEmail(email: email) { (result) in
+        interactor.saveEmail(email: email) { [weak self] (result) in
             switch result {
             case .success(_):
-                self.view?.goToNumberValidationScreen()
+                self?.output(.goToMainView)
             case .failure(let error):
-                self.view?.showError(text: error.localizedDescription, title: "Email Error", actionTitle: "OK", handler: nil)
+                self?.view?.showError(text: error.localizedDescription, title: "Email Error", actionTitle: "OK", handler: nil)
             }
         }
     }
     
     func verifyPhoneNumber(phoneNumber: String) {
-        interactor.verifyPhoneNumber(phoneNumber: phoneNumber) { (result) in
+        interactor.verifyPhoneNumber(phoneNumber: phoneNumber) {  result in
             switch result {
             case .success( let verificationId):
-                print("phone number is correct \(verificationId) ")
+               break
             case .failure(let error):
                 print("phone number is not correct \(error) ")
             }
