@@ -64,8 +64,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func goToContactsListFlow() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
+        let vc = MainMenuBuilder().build()
         self.navigationController.pushViewController(vc, animated: true)
     }
     

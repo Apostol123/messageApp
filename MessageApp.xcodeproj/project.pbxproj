@@ -31,6 +31,15 @@
 		0784217C266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */; };
 		0784218C266FB9E900986354 /* ErrorDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784218B266FB9E900986354 /* ErrorDialog.swift */; };
 		07D5946526720D7000783CA7 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5946426720D7000783CA7 /* LoginViewOutput.swift */; };
+		07D594752677625F00783CA7 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D594742677625F00783CA7 /* MainMenuViewController.swift */; };
+		07D594782677628A00783CA7 /* MainMenuViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D594772677628A00783CA7 /* MainMenuViewProtocol.swift */; };
+		07D5947B267762B600783CA7 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5947A267762B600783CA7 /* MainMenuPresenter.swift */; };
+		07D5947E267762DD00783CA7 /* MainMenuPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5947D267762DD00783CA7 /* MainMenuPresenterProtocol.swift */; };
+		07D59481267762FD00783CA7 /* MainMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D59480267762FD00783CA7 /* MainMenuInteractor.swift */; };
+		07D594842677630F00783CA7 /* MainMenuInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D594832677630F00783CA7 /* MainMenuInteractorProtocol.swift */; };
+		07D594872677632200783CA7 /* MainMenuDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D594862677632200783CA7 /* MainMenuDataManager.swift */; };
+		07D5948A2677633800783CA7 /* MainMenuDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D594892677633800783CA7 /* MainMenuDataManagerProtocol.swift */; };
+		07D5948D2677642300783CA7 /* MainMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D5948C2677642300783CA7 /* MainMenuBuilder.swift */; };
 		744895D787BC429FD05AC826 /* libPods-MessageApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +70,15 @@
 		0784217B266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneNumberValidationCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		0784218B266FB9E900986354 /* ErrorDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialog.swift; sourceTree = "<group>"; };
 		07D5946426720D7000783CA7 /* LoginViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
+		07D594742677625F00783CA7 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		07D594772677628A00783CA7 /* MainMenuViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewProtocol.swift; sourceTree = "<group>"; };
+		07D5947A267762B600783CA7 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
+		07D5947D267762DD00783CA7 /* MainMenuPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenterProtocol.swift; sourceTree = "<group>"; };
+		07D59480267762FD00783CA7 /* MainMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuInteractor.swift; sourceTree = "<group>"; };
+		07D594832677630F00783CA7 /* MainMenuInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuInteractorProtocol.swift; sourceTree = "<group>"; };
+		07D594862677632200783CA7 /* MainMenuDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuDataManager.swift; sourceTree = "<group>"; };
+		07D594892677633800783CA7 /* MainMenuDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuDataManagerProtocol.swift; sourceTree = "<group>"; };
+		07D5948C2677642300783CA7 /* MainMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBuilder.swift; sourceTree = "<group>"; };
 		2EBCDADFF82CB6B6195BA94D /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9F141C2DDA080D2F967C220 /* libPods-MessageApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessageApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF3B45EBA0F74893FB31C7A /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +151,7 @@
 		0784210726662C3100986354 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				07D5946D2677621500783CA7 /* MainMenu */,
 				0784210826662C3800986354 /* Login */,
 			);
 			path = Modules;
@@ -272,6 +291,62 @@
 			path = LoginPhoneNumberValidationView;
 			sourceTree = "<group>";
 		};
+		07D5946D2677621500783CA7 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				07D594732677624500783CA7 /* Builder */,
+				07D594712677623100783CA7 /* DataManager */,
+				07D594702677622C00783CA7 /* Interactor */,
+				07D5946F2677622300783CA7 /* Presenter */,
+				07D5946E2677621D00783CA7 /* View */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		07D5946E2677621D00783CA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07D594742677625F00783CA7 /* MainMenuViewController.swift */,
+				07D594772677628A00783CA7 /* MainMenuViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07D5946F2677622300783CA7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07D5947A267762B600783CA7 /* MainMenuPresenter.swift */,
+				07D5947D267762DD00783CA7 /* MainMenuPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		07D594702677622C00783CA7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				07D59480267762FD00783CA7 /* MainMenuInteractor.swift */,
+				07D594832677630F00783CA7 /* MainMenuInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		07D594712677623100783CA7 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				07D594862677632200783CA7 /* MainMenuDataManager.swift */,
+				07D594892677633800783CA7 /* MainMenuDataManagerProtocol.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		07D594732677624500783CA7 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				07D5948C2677642300783CA7 /* MainMenuBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		51030FFEBF07750761EAC29D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,25 +462,34 @@
 			files = (
 				078421332666342C00986354 /* LoginDataManager.swift in Sources */,
 				0784217C266A20EE00986354 /* LoginPhoneNumberValidationCellCollectionViewCell.swift in Sources */,
+				07D594752677625F00783CA7 /* MainMenuViewController.swift in Sources */,
+				07D594872677632200783CA7 /* MainMenuDataManager.swift in Sources */,
 				07842177266A201A00986354 /* LoginPhoneNumberValidationView.swift in Sources */,
+				07D59481267762FD00783CA7 /* MainMenuInteractor.swift in Sources */,
 				07842146266639C000986354 /* MessageAppThemeColors.swift in Sources */,
+				07D594782677628A00783CA7 /* MainMenuViewProtocol.swift in Sources */,
 				078421302666341300986354 /* LoginInteractorProtocol.swift in Sources */,
+				07D5948D2677642300783CA7 /* MainMenuBuilder.swift in Sources */,
 				07842124266633A800986354 /* LoginViewControllerProtocol.swift in Sources */,
 				078420D8265F7A5700986354 /* AppCoordinator.swift in Sources */,
 				078421362666343E00986354 /* LoginDataManagerProtocol.swift in Sources */,
 				07842127266633C500986354 /* LoginViewControllerPresenter.swift in Sources */,
 				0784213A2666346400986354 /* CoordinatorProtocol.swift in Sources */,
+				07D5948A2677633800783CA7 /* MainMenuDataManagerProtocol.swift in Sources */,
 				078420BF265F78E700986354 /* AppDelegate.swift in Sources */,
 				078421212666336E00986354 /* LoginViewController.swift in Sources */,
+				07D594842677630F00783CA7 /* MainMenuInteractorProtocol.swift in Sources */,
 				078420C1265F78E700986354 /* SceneDelegate.swift in Sources */,
 				0784212A266633DF00986354 /* LoginViewControllerPresenterProtocol.swift in Sources */,
 				07842141266636D300986354 /* LoginBuilder.swift in Sources */,
 				0784216A2668E3D300986354 /* LoginEmailValidatonCollectionViewCell.swift in Sources */,
 				0784212D2666340100986354 /* LoginInteractor.swift in Sources */,
 				07D5946526720D7000783CA7 /* LoginViewOutput.swift in Sources */,
+				07D5947B267762B600783CA7 /* MainMenuPresenter.swift in Sources */,
 				078421662668E2AA00986354 /* LoginEmailValidationView.swift in Sources */,
 				0784218C266FB9E900986354 /* ErrorDialog.swift in Sources */,
 				0784213E2666347B00986354 /* BuilderProtocol.swift in Sources */,
+				07D5947E267762DD00783CA7 /* MainMenuPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
