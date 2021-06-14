@@ -14,4 +14,17 @@ class MainMenuPresenter: MainMenuPresenterProtocol {
     init(interactor: MainMenuInteractorProtocol) {
         self.interactor = interactor
     }
+    
+    func askForContactPermision() {
+        interactor.askForContactsPermission { (result) in
+            switch result {
+            case .success(let accesValue):
+                if accesValue {
+                    
+                }
+            case .failure(let error):
+                self.view?.showError(text: error.localizedDescription, title: "There was a error in getting your contacts", actionTitle: "OK", handler: nil)
+            }
+        }
+    }
 }

@@ -13,4 +13,15 @@ class MainMenuInteractor: MainMenuInteractorProtocol {
     init(dataManager: MainMenuDataManagerProtocol) {
         self.dataManager = dataManager
     }
+    
+    func askForContactsPermission(completion: @escaping (Result<Bool, Error>) -> Void) {
+        dataManager.askForContactsPermission { (result) in
+            switch result {
+            case .success(let accessValue):
+                completion(.success(accessValue))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

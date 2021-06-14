@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainMenuInteractorProtocol {
-    
+    func askForContactsPermission(completion: @escaping (Result<Bool,Error>) -> Void) 
 }

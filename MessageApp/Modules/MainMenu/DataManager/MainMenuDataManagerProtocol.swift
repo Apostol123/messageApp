@@ -5,7 +5,9 @@
 //  Created by Apostol, Alexandru on 14/06/2021.
 //
 
-import Foundation
+import Contacts
 
 protocol  MainMenuDataManagerProtocol {
+    func askForContactsPermission(completion: @escaping (Result<Bool,Error>) -> Void)
+    func getAllContacts(completion: @escaping (Result<[CNContact], Error>) -> Void)
 }

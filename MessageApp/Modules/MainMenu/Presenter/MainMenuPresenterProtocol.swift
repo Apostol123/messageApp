@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainMenuPresenterProtocol: class {
-    
+    func askForContactPermision()
 }
